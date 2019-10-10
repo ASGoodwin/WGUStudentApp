@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wgustudentapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".View.Activities.EmailNotesActivity"></activity>
+        <activity android:name=".View.Activities.AddEditAssessmentActivity" />
+        <activity android:name=".View.Activities.AllCourseAssessmentsActivity" />
+        <activity android:name=".View.Activities.AddEditCourseActivity" />
+        <activity android:name=".View.Activities.AllTermCoursesActivity" />
+        <activity android:name=".View.Activities.SingleTermActivity" />
+        <activity android:name=".View.Activities.AddTermActivity" />
+        <activity android:name=".View.Activities.AllTermsActivity" />
+        <activity android:name=".View.Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".Classes.AlertReceiver" />
+    </application>
+
+</manifest>

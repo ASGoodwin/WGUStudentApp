@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Activities.MainActivity">
+
+    <TextView
+        android:id="@+id/tvWGU"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="WGU"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@+id/pbProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pbProgress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/tvProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWGU"
+        android:indeterminate="false"
+        android:progress="0"/>
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="413dp"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="Your Progress"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pbProgress" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="402dp"
+        android:layout_height="109dp"
+        android:gravity="center"
+        android:text="START"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProgress"
+        android:onClick="openAllTermsActivity"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

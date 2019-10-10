@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Activities.AddEditAssessmentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etAssessmentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Assessment Title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Type" />
+
+            <NumberPicker
+                android:id="@+id/npType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></NumberPicker>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose a Start Date" />
+
+            <DatePicker
+                android:id="@+id/dpAssessmentStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></DatePicker>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose a Due Date" />
+
+            <DatePicker
+                android:id="@+id/dpDueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></DatePicker>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes (Optional)" />
+
+            <EditText
+                android:id="@+id/etAssessmentNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add optional notes here"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:gravity="start|top"/>
+
+            <Button
+                android:id="@+id/btnEmailCourseNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="emailNotes"
+                android:text="Email Notes" />
+
+            <Button
+                android:id="@+id/btnAddAssessmentAlerts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addAssessmentAlerts"
+                android:text="Turn On Notifications For This Assessment"/>
+
+            <Button
+                android:id="@+id/btnSaveAssessment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="saveAssessment"
+                android:text="Save" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

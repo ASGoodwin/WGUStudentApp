@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Activities.AddEditCourseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-254dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Course Title (Required)"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status" />
+
+            <NumberPicker
+                android:id="@+id/npStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></NumberPicker>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose a Start Date" />
+
+            <DatePicker
+                android:id="@+id/dpCourseStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></DatePicker>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose an Expected Completion Date" />
+
+            <DatePicker
+                android:id="@+id/dpCourseEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></DatePicker>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mentor Name"/>
+
+            <EditText
+                android:id="@+id/etMentorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Mentor Name (Optional)"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mentor Phone"/>
+
+            <EditText
+                android:id="@+id/etMentorPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Mentor Phone (Optional)"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mentor Email"/>
+
+            <EditText
+                android:id="@+id/etMentorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Mentor Email (Optional)"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes" />
+
+            <EditText
+                android:id="@+id/etCourseNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add notes here (Optional)"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:gravity="start|top"/>
+
+            <Button
+                android:id="@+id/btnEmailCourseNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="emailNotes"
+                android:text="Email Notes" />
+
+            <Button
+                android:id="@+id/btnAddCourseAlerts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addCourseAlerts"
+                android:text="Turn On Notifications For This Course"/>
+
+            <Button
+                android:id="@+id/btnSaveCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="saveCourse"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/btnViewAssessments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:onClick="openAllCourseAssessments"
+                android:text="View Assessments" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
